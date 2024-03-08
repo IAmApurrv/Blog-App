@@ -1,7 +1,14 @@
-Steps to run the code -->
-    npm install
-    npx json-server --watch data/db.json --port 3001
-    npm start
+## npm install
+
+# Steps to run the code -->
+1. npx json-server --watch data/db.json --port 3001
+2. npm start
+
+# Screenshots -->
+![Image Alt Text](screenshots/Home.png)
+![Image Alt Text](screenshots/Blog-Details.png)
+![Image Alt Text](screenshots/Add-Blog.png)
+![Image Alt Text](screenshots/404-Page.png)
 
 
 # Getting Started with Create React App

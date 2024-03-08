@@ -5,10 +5,10 @@
 2. npm start
 
 # Screenshots -->
-![Image Alt Text](screenshots/Home.png)
-![Image Alt Text](screenshots/Blog-Details.png)
-![Image Alt Text](screenshots/Add-Blog.png)
-![Image Alt Text](screenshots/404-Page.png)
+![Image Alt Text](Screenshots/Home.png)
+![Image Alt Text](Screenshots/Blog-Details.png)
+![Image Alt Text](Screenshots/Add-Blog.png)
+![Image Alt Text](Screenshots/404-Page.png)
 
 
 # Getting Started with Create React App

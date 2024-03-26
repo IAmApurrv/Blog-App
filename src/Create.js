@@ -13,7 +13,19 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // to prevent refresh of page after clicking button
-    const blog = { title, body, author };
+
+    const currentDate = new Date();
+    const day = currentDate.getDate().toString().padStart(2, '0'); // Get day
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Get month (months are zero-based)
+    const year = currentDate.getFullYear(); // Get year
+    const hours = currentDate.getHours().toString().padStart(2, '0'); // Get hours
+    const minutes = currentDate.getMinutes().toString().padStart(2, '0'); // Get minutes
+    const seconds = currentDate.getSeconds().toString().padStart(2, '0'); // Get seconds
+
+    const timestamp = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    // const IST = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
+    
+    const blog = { title, body, author, timestamp: timestamp };
     // console.log(blog);
 
     setIsWaiting(true)

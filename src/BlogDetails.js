@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const BlogDetails = () => {
@@ -6,7 +6,7 @@ const BlogDetails = () => {
   const { data: blog, error, isPending } = useFetch('http://localhost:3001/blogs/' + id);
   const Navigate = useNavigate();
 
-  const handleClick = () => {
+  const handleDelete = () => {
     fetch('http://localhost:3001/blogs/' + blog.id, {
       method: 'DELETE'
     }).then(() => {
@@ -22,9 +22,11 @@ const BlogDetails = () => {
         <div className="card col-lg-10 mx-auto" style={{ background: "#e5e5e5" }}>
           <div className="card-body">
             <h1 className="card-title text-primary text-center" style={{ fontSize: '3rem', padding: '10px' }}><b>{blog.title}</b></h1>
-            <p className="card-text text-center mb-4">Posted by - {blog.author}</p>
+            <p className="card-text text-center">Posted by - {blog.author}</p>
+            <p className="card-text text-center">{blog.timestamp}</p>
             <p className="card-text" style={{ whiteSpace: 'pre-line' }}>{blog.body}</p>
-            <button onClick={handleClick} className="btn btn-danger btn-lg btn-block w-100 mt-3">Delete</button>
+            <Link to={`/blogs/${id}/update`} className="btn btn-warning btn-lg btn-block w-100 text-white mt-3">Update</Link>
+            <button onClick={handleDelete} className="btn btn-danger btn-lg btn-block w-100 mt-3">Delete</button>
           </div>
         </div>
       )}
@@ -39,7 +41,7 @@ const BlogDetails = () => {
   //         <h2>{ blog.title }</h2>
   //         <p>Posted by - { blog.author }</p>
   //         <div>{ blog.body }</div>
-  //         <button className="w-100" onClick={handleClick}>Delete</button>
+  //         <button className="w-100" onClick={handleDelete}>Delete</button>
   //       </article>
   //     )}
   //   </div>
@@ -59,7 +61,7 @@ export default BlogDetails;
 //     const { data: blog, error, isWaiting } = useFetch('http://localhost:3001/blogs/' + id)
 //     const Navigate = useNavigate();
 
-//     const handleClick = () => {
+//     const handleDelete = () => {
 //         // console.log(blog.title + " blog is deleted.")
 //         fetch('http://localhost:3001/blogs/' + blog.id, {
 //             method: 'DELETE'
@@ -78,7 +80,7 @@ export default BlogDetails;
 //                     <h2>{blog.title}</h2>
 //                     <p>Posted by - {blog.author}</p>
 //                     <div>{blog.body}</div>
-//                     <button onClick={handleClick}>Delete</button>
+//                     <button onClick={handleDelete}>Delete</button>
 //                 </article>
 //             )}
 //         </div>

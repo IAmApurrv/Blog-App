@@ -30,25 +30,25 @@ To run the app locally, follow these steps:
 ## Screenshots
 
 ### No Blogs
-![No Blogs](/screenshots/no-blogs.png)
+![No Blogs](/Screenshots/no-blogs.png)
 
 ### Add Blog
-![Add Blog](/screenshots/add-blog.png)
+![Add Blog](/Screenshots/add-blog.png)
 
 ### All Blogs
-![All Blogs](/screenshots/all-blogs.png)
+![All Blogs](/Screenshots/all-blogs.png)
 
 ### Blog Card
-![Blog Card](/screenshots/blog-card.png)
+![Blog Card](/Screenshots/blog-card.png)
 
 ### Update Blog
-![Update Blog](/screenshots/update-blog.png)
+![Update Blog](/Screenshots/update-blog.png)
 
 ### Updated Blog Card
-![Updated Blog Card](/screenshots/updated-blog-card.png)
+![Updated Blog Card](/Screenshots/updated-blog-card.png)
 
 ### 404 Page
-![404 Page](/screenshots/404-page.png)
+![404 Page](/Screenshots/404-page.png)
 
 ## Usage
 
